@@ -10,17 +10,40 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="form-floating mb-3">
-      <input
-        type="email"
-        class="form-control"
-        id="floatingInput"
-        placeholder="name@example.com"
-      />
-      <label for="floatingInput">Email address</label>
+    <!-- input/button -->
+    <form class="p-5 container">
+      <fieldset>
+        <h1 class="text-center mb-5">Todo List App</h1>
+      </fieldset>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control todo-input"
+          id="floatingInput"
+          placeholder="Add a Todo"
+        />
+        <label for="floatingInput">Add a Todo</label>
+      </div>
+      <button type="submit" class="btn btn-primary w-100 p-3">Add Todo</button>
+    </form>
+
+    <!-- todo list -->
+    <div class="px-5 container">
+      <ul class="list-group todo-container"></ul>
     </div>
-    <button type="button" class="btn btn-primary">Add Todo</button>
+
+    <!-- delete button -->
+    <div class="container px-5">
+      <button
+        type="button"
+        class="btn btn-danger w-100 p-3 mt-3 delete-todo d-none"
+      >
+        Delete Todos
+      </button>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./app.js"></script>
   </body>
 </html>
